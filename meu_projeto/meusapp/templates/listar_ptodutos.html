@@ -1,0 +1,17 @@
+<!-- templates/listar_produtos.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto.nome }} - {{ produto.preco }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
