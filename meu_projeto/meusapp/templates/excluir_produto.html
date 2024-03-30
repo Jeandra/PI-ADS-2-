@@ -1,0 +1,18 @@
+<!-- templates/excluir_produto.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Produto</title>
+</head>
+<body>
+    <h1>Excluir Produto</h1>
+    <p>Você tem certeza que deseja excluir o produto "{{ produto.nome }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar</button>
+        <a href="{% url 'listar_produtos' %}">Cancelar</a>
+    </form>
+</body>
+</html>
