@@ -1,0 +1,21 @@
+<!-- templates/cadastrar_produto.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+</head>
+<body>
+    <h1>Cadastrar Produto</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" name="preco"><br>
+        <!-- Outros campos do formulário -->
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
