@@ -9,6 +9,6 @@ class Produto(models.Model):
 
     def _str_(self):
         return self.nome
-    
+        
     class Meta:
         app_label = 'meusapp'
