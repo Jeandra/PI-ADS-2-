@@ -1,5 +1,6 @@
 from django import forms
-from .models import Produto
+from meusapp.models import Produto
+from django.shortcuts import render 
 
 class ProdutoForm(forms.ModelForm):
     class Meta:
