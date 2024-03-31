@@ -13,5 +13,11 @@
             <li>{{ produto.nome }} - {{ produto.preco }}</li>
         {% endfor %}
     </ul>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto.nome }} - R$ {{ produto.preco }} <a href="{% url 'excluir_produto' produto.id %}">Excluir</a></li>
+        {% endfor %}
+    </ul>
+    <button><a href="{% url 'home' %}">Voltar</a></button>
 </body>
 </html>
