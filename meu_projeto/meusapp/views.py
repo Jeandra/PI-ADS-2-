@@ -1,9 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Produto
 from .forms import ProdutoForm
+from	django.views.generic	import	TemplateView,ListView
+from	django.views.generic.edit	import	CreateView,	UpdateView,	DeleteView
+
+
 
 
 def home(request):
+    data = {}
+    data ['db'] = Produto.objects.all()
     return render(request, 'home.html')  # Supondo que você tenha um template chamado 'home.html'
 
 def listar_ptodutos(request):
@@ -12,7 +18,7 @@ def listar_ptodutos(request):
 
 def cadastrar_produto(request):
     if request.method == 'POST':
-        form = ProdutoForm(request.POST, request.FILES)
+        form = ProdutoForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('listar_ptodutos')
