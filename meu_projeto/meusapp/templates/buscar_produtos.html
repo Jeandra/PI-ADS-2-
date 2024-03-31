@@ -10,6 +10,7 @@
     <form action="{% url 'buscar_produtos' %}" method="GET">
         <input type="text" name="query" placeholder="Buscar Produtos">
         <button type="submit">Buscar</button>
+        <button><a href="{% url 'home' %}">Voltar</a></button>
     </form>
     <hr>
     <h2>Produtos Encontrados:</h2>
