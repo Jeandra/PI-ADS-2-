@@ -18,6 +18,6 @@
             <li>{{ produto.nome }} - R$ {{ produto.preco }} <a href="{% url 'excluir_produto' produto.id %}">Excluir</a></li>
         {% endfor %}
     </ul>
-    <button><a href="{% url 'home' %}">Voltar</a></button>
+    <button type="button"><a href="{% url 'home' %}">Voltar</a></button>
 </body>
 </html>
